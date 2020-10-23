@@ -1,0 +1,2 @@
+D:\Rust mod development\DiscordPerks\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
+D:\Rust mod development\DiscordPerks\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
