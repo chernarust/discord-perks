@@ -32,6 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DiscordAuth.cs" />
+    <Compile Include="DiscordSync.cs" />
     <Compile Include="Kits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +73,9 @@
     </Reference>
     <Reference Include="Oxide.CSharp">
       <HintPath>..\..\..\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Oxide.Ext.Discord">
+      <HintPath>..\Oxide.Ext.Discord.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.MySql">
       <HintPath>..\..\..\RustDedicated_Data\Managed\Oxide.MySql.dll</HintPath>

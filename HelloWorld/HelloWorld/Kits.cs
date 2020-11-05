@@ -427,7 +427,7 @@ namespace Oxide.Plugins
             }
         }
 
-        private object GiveKit(BasePlayer player, string kitname)
+        public object GiveKit(BasePlayer player, string kitname)
         {
             if (string.IsNullOrEmpty(kitname))
             {
@@ -476,7 +476,7 @@ namespace Oxide.Plugins
             }
 
             var position = -1;
-            return (((container != null) && item.MoveToContainer(container, position, true)) || (item.MoveToContainer(inv.containerMain, -1, true) || item.MoveToContainer(inv.containerBelt, -1, true)));
+            return container != null && item.MoveToContainer(container, position, true) || item.MoveToContainer(inv.containerMain, -1, true) || item.MoveToContainer(inv.containerBelt, -1, true);
         }
 
         private Item BuildItem(int itemid, int amount, ulong skin, int blueprintTarget)
@@ -615,6 +615,7 @@ namespace Oxide.Plugins
             return true;
         }
 
+        // TODO: Make this work with the Discord Sync mod
         private object CanRedeemKit(BasePlayer player, string kitname, bool skipAuth = false)
         {
             if (string.IsNullOrEmpty(kitname))
@@ -1648,7 +1649,7 @@ namespace Oxide.Plugins
             RefreshKitPanel(player, playerGUI.guiid, arg.GetInt(0));
         }
 
-        private List<BasePlayer> FindPlayer(string arg)
+        public List<BasePlayer> FindPlayer(string arg)
         {
             var listPlayers = Pool.GetList<BasePlayer>();
 
